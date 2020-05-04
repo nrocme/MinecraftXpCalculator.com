@@ -144,11 +144,14 @@ table, th, td {
 
 #h1 {
 	color: white;
+	font-size: 3vw;
+	text-align: center;
 }
 	td  {
 
 	color: white;
 	}
+	
 .white {
 
 	color:white;
@@ -193,17 +196,18 @@ margin-left:1300px;
 </style>
 </head>
 <body background="background.jpg">
-<h1 id="h1"> Minecraft Experience Calculator</h1> 
+<h1 id="h1">Minecraft Experience Calculator</h1> 
 <br>
 <br>
 <form id="form1" action="#" method="get" onsubmit="calc()">
 <h1>
-<table>
+<table align="center">
 	<tr>
-		<th > Current Level <td valign="top"> <input type="number" id="curr">
+		<th > Current Level <td> <input type="number" id="curr">
 	<tr>
 		<th> Target Level <td> <input type="number"  id="target">
-		<button type="submit">Calculate</button>
+    <tr>
+		<td> <button type="submit">Calculate</button>
 </table>
 <br>
 <table class ="font" id="margin">
