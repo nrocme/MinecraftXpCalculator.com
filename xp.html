@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-7136783595202845",
-    enable_page_level_ads: true
-  });
-</script>
-<script>
+
 function xpNeed() {
 curr = document.getElementById("curr").value; 
 target = document.getElementById("target").value;
@@ -36,6 +30,8 @@ expNeed=0;
 	}
 	expNeed = tarXp - currXp;
 }
+
+
 function calc(curr, target) {
  curr = document.getElementById("curr").value; 
  target = document.getElementById("target").value;
@@ -129,16 +125,26 @@ function calc(curr, target) {
 			oneTo6[i].innerHTML = (expNeed/1).toFixed(0) + " to " + (expNeed/6).toFixed(0);
 		}
 }
-
 </script> 
+
+
 <style>
-* {
 
-font-family: arial;
-
+@font-face {
+  font-family: minecraftFont;
+  src: url(minecraft-webfont.woff);
+  font-weight: bold;
 }
+
+* {
+    font-family: minecraftFont;
+    font-size: 1.25vw;
+}
+
 table, th, td {
-   border: 1px solid white;
+   border: .2vw solid black;
+   background: rgba(0, 0, 0, 0.3);
+   
 }
 
 
@@ -147,52 +153,33 @@ table, th, td {
 	font-size: 3vw;
 	text-align: center;
 }
-	td  {
+td  {
+    color: white;
+}
 
-	color: white;
-	}
-	
-.white {
-
-	color:white;
-	
-	}
- .smalltext
- {
- 
- font-size: 12px;
- }
 th {
 
 	color: #66ffff;
 }
-.font {
 
-	font-size: 20px;
-	} 
-
-.center {
-
- align-content: center;
-
-}
-#margin {
-
-margin-left:100px;
+button {
+    font-size:  2.5vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0px;
+    color: #66ffff;
+    padding-top: .3vw;
 }
 
-#margin2 {
-
-margin-left:500px;
+input {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: .3vw;
+    text-align: center;
+    color: white;
+    border: 0vw;
+    font-size: 1.5vw;
 }
-#margin3 {
 
-margin-left:900px;
-}
-#margin4 {
 
-margin-left:1300px;
-}
 </style>
 </head>
 <body background="background.jpg">
@@ -203,14 +190,14 @@ margin-left:1300px;
 <h1>
 <table align="center">
 	<tr>
-		<th > Current Level <td> <input type="number" id="curr">
+		<th> Current Level <td> <input type="number" id="curr">
 	<tr>
 		<th> Target Level <td> <input type="number"  id="target">
     <tr>
-		<td> <button type="submit">Calculate</button>
+		<td colspan = "2" align= "center" valign="center"> <button type="submit">Calculate</button>
 </table>
 <br>
-<table class ="font" id="margin">
+<table class ="font" align ="center">
 	<tr>
 		<th> XP producer
 		<th> XP per action
@@ -470,7 +457,7 @@ margin-left:1300px;
 	<tr>
 </table>
 <br>
-<table class ="font" id="margin">
+<table class="font" align="center">
 	<tr>
 		<th> XP producer
 		<th> XP per action
@@ -575,16 +562,10 @@ margin-left:1300px;
 		<td class="oneTo6">
 
 </table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a href="changelog.html"> Changelog </a>
 
+<br>
+<br>
 
-		
 </form>
 </body>
 </html>
