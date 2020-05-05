@@ -1,0 +1,48 @@
+@font-face {
+  font-family: minecraftFont;
+  src: url(minecraft-webfont.woff);
+  font-weight: bold;
+}
+
+* {
+    font-family: minecraftFont;
+    font-size: 1.25vw;
+}
+
+table, th, td {
+   border: .2vw solid black;
+   background: rgba(0, 0, 0, 0.3);
+   
+}
+
+
+#h1 {
+	color: white;
+	font-size: 3vw;
+	text-align: center;
+}
+td  {
+    color: white;
+}
+
+th {
+
+	color: #66ffff;
+}
+
+button {
+    font-size:  2.5vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0px;
+    color: #66ffff;
+    padding-top: .3vw;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: .3vw;
+    text-align: center;
+    color: white;
+    border: 0vw;
+    font-size: 1.5vw;
+}
