@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body background="images/MC_withblur_more.jpg">
+<p class="space"> </p>
+<img class="logo" src="images/logo.png" alt="Logo" style="width:55vw;height:29vw;"> 
+<form action="#" method="get">
+<h1>
+<table align="center">
+	<tr>
+		<th> Current Level <td> <input type="number" id="curr">
+	<tr>
+		<th> Target Level <td> <input type="number"  id="target">
+    <tr>
+		<td colspan = "2" align= "center" valign="center"> <button type="button" onclick="calc()">Calculate</button>
+</table>
+<br>
+<table class ="font" align ="center">
+	<tr>
+		<th> XP producer
+		<th> XP per action
+		<th> Actions needed
+		<th> XP producer
+		<th> XP per action
+		<th> Actions needed
+		<th> Actions needed
+		<th> XP per action
+		<th> Actions needed
+		<th> Actions needed
+		<th> XP per action
+		<th> Actions needed
+		
+	<tr>
+	<th colspan="3" align="center"> Animals
+	<th colspan="3" align="center"> Monsters
+	<th colspan="3" align="center"> Monsters
+	<th colspan="3" align="center"> Bosses
+	
+	<tr>
+	
+		<td> Chickens 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Creeper
+		<td> 5
+		<td class="five">
+		<td> Endermite 
+		<td> 3
+		<td class="three">
+		<td> Ender Dragon
+		<td> 12000
+		<td class="enderDragon">
+
+	<tr>
+	
+		<td> Cow 
+		<td> 1-3
+		<td  class="oneTo3">
+		<td> Enderman
+		<td> 5
+		<td class="five">
+		<td> Vex 
+		<td> 3
+		<td class="three"> 
+		<td> Wither
+		<td> 50
+		<td class="fifty">
+
+		
+	<tr>
+	
+		<td> Cod 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Ghast
+		<td> 5
+		<td class="five">
+		<td> Large Slime
+		<td> 4
+		<td class="four">
+		<th colspan="3" align="center"> Mining
+		
+	<tr>
+		
+		<td> Horse
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Husk
+		<td> 5
+		<td class="five">
+		<td> Large Magma 
+		<td> 4
+		<td class="four">
+		<td> Coal Ore
+		<td> 0-2
+		<td class="oneTo2">
+		
+	<tr>
+	
+		<td> Mooshroom
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Illusioner 
+		<td> 5
+		<td class="five">
+		<td> Small Slime
+		<td> 2
+		<td class="two">
+		<td> Diamond Ore
+		<td> 3-7
+		<td class="threeTo7">
+		
+	<tr>
+	
+		<td> Llama
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Phantom
+		<td> 5
+		<td class="five">
+		<td> Small Slime
+		<td> 2
+		<td class="two">
+		<td> Emerald Ore
+		<td> 3-7
+		<td class="threeTo7">
+		
+	<tr>
+	
+		<td> Ocelot 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Shulker 
+		<td> 5
+		<td class="five">
+		<td> Tiny Slime
+		<td> 1
+		<td class="one">
+		<td> Lapis Ore 
+		<td> 2-5
+		<td class="twoTo5">
+	
+	<tr>
+	
+		<td> Parrot
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Silverfish
+		<td> 5
+		<td class="five">
+		<td> Tiny Magma 
+		<td> 1
+		<td class="one">
+		<td> Nether Quartz Ore
+		<td> 2-5
+		<td class="twoTo5">
+		
+	<tr>
+	
+		<td> Pig 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Skeletons 
+		<td> 5
+		<td class="five">
+		<td> Baby Zombie
+		<td> 12
+		<td class="twelve">
+		<td> Redstone Ore
+		<td> 1-5
+		<td class="oneTo5">
+		
+	<tr>
+	
+		<td> Polar Bear
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Spider
+		<td> 5
+		<td class="five">
+		<td> Baby Pigman
+		<td> 12
+		<td class="twelve">
+		<td> Mob Spawner 
+		<td> 15-43
+		<td class="fifteenTo43">
+		
+	<tr>
+	
+		<td> Sheep
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Stray
+		<td> 5
+		<td class="five">
+		<td> Spider Jockey
+		<td> 10
+		<td class="ten">
+		<th colspan="3" align="center"> Smelting
+		
+	<tr>
+	
+		<td> Squid
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Vindicator
+		<td> 5
+		<td class="five">
+		<td> Chicken Jockey
+		<td> 10
+		<td class="ten">
+		<td> Diamond Ore
+		<td> 1
+		<td class="one">
+		
+		
+	<tr>
+	
+		<td> Turtle
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Witch 
+		<td> 5
+		<td class="five">
+		<td> Blaze
+		<td> 10
+		<td class="ten">
+		<td> Emerald Ore 
+		<td> 1
+		<td class="one">
+		
+	<tr>
+		<td> Rabbit 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Wither Skeleton
+		<td> 5
+		<td class="five">
+		<td> Guardian
+		<td> 10
+		<td class="ten">
+		<td> Gold Ore
+		<td> 1
+		<td class="one">
+		
+	<tr>
+		<td> Wolf 
+		<td> 1-3
+		<td class="oneTo3">
+		<td> Zombie
+		<td> 5
+		<td class="five">
+		<td> Elder Guardian
+		<td> 10
+		<td class="ten">
+		<td> Iron Ore
+		<td> 0.7
+		<td class="zero7">
+		
+		
+	<tr>
+	
+		<td> Cave Spider 
+		<td> 5
+		<td class="five">
+		<td> Zombie Pigman
+		<td> 5
+		<td class="five">
+		<td> Evoker
+		<td> 10
+		<td class="ten">
+		<td> Redstone Ore
+		<td> 0.7
+		<td class="zero7">
+	<tr>
+</table>
+<br>
+<table class="font" align="center">
+	<tr>
+		<th> XP producer
+		<th> XP per action
+		<th> Actions needed
+<tr>
+	<th colspan="3" align="center"> Smelting
+	
+	
+	<tr>
+	
+		<td> Clay
+		<td> 0.35
+		<td class="zero35">
+
+
+	<tr>
+	
+		<th colspan="3" align="center"> Cooking
+
+
+
+		
+	<tr>
+	
+		<td> Raw Beef
+		<td> 0.35
+		<td class="zero35">
+	
+		
+	<tr>
+		
+		<td> Raw Chicken
+		<td> 0.35
+		<td class="zero35">
+
+		
+	<tr>
+	
+		<td> Raw Cod
+		<td> 1-3
+		<td class="oneTo3">
+
+		
+	<tr>
+	
+		<td> Raw Mutton
+		<td> 1-3
+		<td class="oneTo3">
+
+		
+	<tr>
+	
+		<td> Raw Porkchop
+		<td> 1-3
+		<td class="oneTo3">
+
+	
+	<tr>
+	
+		<td> Raw Rabbit
+		<td> 1-3
+		<td class="oneTo3">
+
+		
+	<tr>
+	
+		<td> Raw Salmon
+		<td> 1-3
+		<td class="oneTo3">
+
+		
+	<tr>
+	
+		<th colspan="3" align="center"> Other
+	
+
+		
+	<tr>
+	
+		<td> XP Bottles
+		<td> 3-11
+		<td class="threeTo11">
+
+	<tr>
+	
+		<td> Trading
+		<td> 3-6
+		<td class="threeTo6">
+
+		
+		
+	<tr>
+	
+		<td> Breeding Animals
+		<td> 1-7
+		<td class="oneTo7">
+
+		
+	<tr>
+		<td> Catching Fish
+		<td> 1-6
+		<td class="oneTo6">
+
+</table>
+
+<br>
+<br>
+
+</form>
+</body>
+</html>

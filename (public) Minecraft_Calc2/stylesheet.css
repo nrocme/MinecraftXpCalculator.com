@@ -9,6 +9,14 @@
     font-size: 1.25vw;
 }
 
+body {
+    background-size: 100vw 85vw;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 table, th, td {
    border: .2vw solid black;
    background: rgba(0, 0, 0, 0.3);
@@ -53,8 +61,8 @@ input {
 .logo {
   position: absolute;
   color: white;
-  top: 5%;
-  left: 21%;
+  top: 0%;
+  left: 23%;
 }
 
 .centered {

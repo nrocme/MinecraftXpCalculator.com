@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "(public) Minecraft_Calc2",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
