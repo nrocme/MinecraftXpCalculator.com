@@ -3,7 +3,7 @@
   src: url(minecraft-webfont.woff);
   font-weight: bold;
 }
-
+/* font styling for entire page*/
 * {
     font-family: minecraftFont;
     font-size: 1.25vw;
@@ -15,12 +15,12 @@ table, th, td {
    
 }
 
-
-#h1 {
+h1 {
 	color: white;
 	font-size: 3vw;
 	text-align: center;
 }
+
 td  {
     color: white;
 }
@@ -45,4 +45,24 @@ input {
     color: white;
     border: 0vw;
     font-size: 1.5vw;
+}
+
+.space {
+    margin-top:27.5vw;
+}
+.logo {
+  position: absolute;
+  color: white;
+  top: 5%;
+  left: 21%;
+}
+
+.centered {
+  color: black;
+  font-size: 2.7vw;
+  font-weight: bold;
+  position: absolute;
+  top: 30%;
+  left: 51%;
+  transform: translate(-50%, -50%);
 }
