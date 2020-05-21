@@ -2,15 +2,24 @@
   font-family: minecraftFont;
   src: url(minecraft-webfont.woff);
   font-weight: bold;
+  font-display: swap;
 }
+
 /* font styling for entire page*/
 * {
     font-family: minecraftFont;
-    font-size: 1.25vw;
+    font-size: 1.07em;
 }
-
+/*<img class="logo" src="images/logo.webp" alt="Logo" style="width:55vw;height:29vw;" async> */
+header {
+   background-image: url("images/logo.png"); 
+   background-size: 55% 80%;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   padding-top: 30%;
+}
 body {
-    background-size: 100vw 85vw;  
+    background-size: 100em 85em;  
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,15 +27,9 @@ body {
 }
 
 table, th, td {
-   border: .2vw solid black;
+   border: .2em solid black;
    background: rgba(0, 0, 0, 0.3);
-   
-}
-
-h1 {
-	color: white;
-	font-size: 3vw;
-	text-align: center;
+   text-align: center;
 }
 
 td  {
@@ -39,25 +42,31 @@ th {
 }
 
 button {
-    font-size:  2.5vw;
+    font-size:  2em;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 0px;
+    border: 0em;
     color: #66ffff;
-    padding-top: .3vw;
+    padding-top: .25em;
+    padding-bottom: .1em;
+    padding-left: .25em;
 }
 
 input {
     background-color: rgba(0, 0, 0, 0.3);
-    padding-top: .3vw;
+    padding-top: 1em;
     text-align: center;
     color: white;
-    border: 0vw;
-    font-size: 1.5vw;
+    border: 0em;
+    font-size: 1.5em;
 }
 
-.space {
-    margin-top:27.5vw;
+.inlineTable {
+    display: inline-block;
 }
+.space {
+    margin-top:30em;
+}
+
 .logo {
   position: absolute;
   color: white;
@@ -67,7 +76,7 @@ input {
 
 .centered {
   color: black;
-  font-size: 2.7vw;
+  font-size: 2.7em;
   font-weight: bold;
   position: absolute;
   top: 30%;

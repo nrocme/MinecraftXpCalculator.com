@@ -1,43 +1,38 @@
 // returns the amount of xp needed to go from the current experience level to the target experience level using numbers                         located at https://minecraft.gamepedia.com/Experience
-function xpNeed(currLevel, targetLevel) {
+function xpNeed(currLevel, targetLevel) 
+{
     var currXp = 0;
     var targetXp = 0;
     var xpNeeded = 0;
-    switch (true) {
-        case (currLevel <= 16):
-            currXp = Math.pow(currLevel, 2) + (6 * currLevel);
-            break;
-        case (currLevel <= 31):
-            currXp = (2.5 * Math.pow(currLevel, 2)) - ((40.5 * currLevel) + 360);
-            break;
-        case (currLevel > 31): 
-            currXp = (4.5 * Math.pow(currLevel, 2)) - ((162.5 * currLevel) + 2220);
-            break;
-        default:
-            alert("value error");
-            break;
-    }
-    switch (true) {
-        case (targetLevel <= 16):
-            targetXp = Math.pow(targetLevel, 2) + (6 * targetLevel);
-            break;
-        case (targetLevel <= 31):
-            targetXp = (2.5 * Math.pow(targetLevel, 2)) - ((40.5 * targetLevel) + 360);
-            break;
-        case (targetLevel > 31): 
-            targetXp = (4.5 * Math.pow(targetLevel, 2)) - ((162.5 * targetLevel) + 2220);
-            break;
-        default:
-            alert("value error");
-            break;
-    }
+    for (i = 0; i < currLevel; i++) {
+        if(i < 16) currXp += (2 * i) + 7;
+        else if(i < 31) currXp += (5 * i) - 38;
+        else currXp += (9 * i) - 158;
+    } 
+    for (i = 0; i < targetLevel; i++) {
+        if(i < 16) targetXp += (2 * i) + 7;
+        else if(i < 31) targetXp += (5 * i) - 38;
+        else targetXp += (9 * i) - 158;
+    } 
     return targetXp - currXp;
 }
 
+function pointsToLevels() 
+{
+    var points = document.getElementById("points").value
+    var i = 0;
+    while (points >= 0) {
+        if(i < 16) points -= (2 * i) + 7;
+        else if(i < 31) points -= (5 * i) - 38;
+        else points -= (9 * i) - 158;
+        i++;
+    } 
+    document.getElementById("levelAnswer").innerHTML = i-1;
+}
     
-function calc() {
-    var currLevel = document.getElementById("currLevel").value; 
-    var targetLevel = document.getElementById("targetLevel").value;
+    
+function calc() 
+{
     var targetXp = xpNeed(document.getElementById("currLevel").value, document.getElementById("targetLevel").value);
     
 	var five = document.getElementsByClassName('five');
