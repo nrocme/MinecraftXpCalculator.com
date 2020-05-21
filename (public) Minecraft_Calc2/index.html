@@ -1,1 +1,185 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="Minecraft, XP, Calculator, MinecraftXPCalculator, Reddit"><meta name="description" content="Web application that calculates the experience required in minecraft to go from a specified level to a target level. This calculator includes a raw experience points calculator aswell that will take a xp points number and convert it into the level that would be reached with the much xp."><meta name="author" content="Chandler"> <script src="https://www.googletagmanager.com/gtag/js?id=UA-165938855-1" async></script> <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js',new Date());gtag('config','UA-165938855-1');</script> <script src="script.js" async></script> <link rel="stylesheet" type="text/css" href="stylesheet.css" async></head><body background="images/background.jpg"> <header> </header><form action="#" method="get"></form><table align="center"><tr><td style="padding-left:1em;padding-right:1em;"> Current Level<td align= "center"> <input type="number" id="currLevel"><tr><td style="padding-left:1em;padding-right:1em;"> Target Level<td align= "center"> <input type="number" id="targetLevel"><tr><td colspan = "2" align= "center" valign="center"> <button type="button" onclick="calc()">Calculate</button></table> <br><table align="center"><tr><td> Raw XP Points to Levels<tr><td> <input type="number" id="points"><td> <button type="button" onclick="pointsToLevels()">Calculate</button><tr><td id="levelAnswer"> -</table> <br> <br> <br> <br> <br><table><tr><th> XP gained<th> XP per action<th> Actions needed<th> XP gained<th> XP per action<th> Actions needed<th> XP gained<th> XP per action<th> Actions needed<tr><th colspan="3"> Mobs<th colspan="3"> Mining<th colspan="3"> Other<tr><td> All Passives excluding bat<td> 1-3<td class="onetothree"><td> Monster Spawner<td> 1-3<td class="onetothree"><td> Bottle o' Enchanting<td> 3-11<td class="threetoeleven"><tr><td> Cave Spider, Creeper, Drowned, Enderman, Ghast, Hoglin, Husk, Illusioner, Phantom, Piglin, Pillager, Shulker, Silverfish, Skeleton, Spider, Stray, Vex, Vindicator, Witch, Wither Skeleton, Zombie, Zoglin, Zombie Pigman<td> 5<td class="five"><td> Redstone Ore<td> 1-5<td class="onetofive"><td> Trading with villager<td> 3-6<td class="threetosix"><tr><td> Endermite<td> 3<td class="three"><td> Lapis and Nether Quartz Ore<td> 2-5<td class="twotofive"><td> Breeding Animals<td> 1-7<td class="onetoseven"><tr><td> Large Slime and Magma Cube<td> 4<td class="four"><td> Diamond and Emerald Ore<td> 3-7<td class="threetoseven"><td> Catching Fish<td> 1-6<td class="onetosix"><tr><td> Medium Slime and Magma Cube<td> 2<td class="two"><td> Coal Ore<td> 0-2<td class="zerototwo"><th colspan="3"> Donate :)<tr><td> Small Slime and Magma Cube<td> 1<td class="one"><th colspan="3"> Smelting/Cooking<td rowspan="4" colspan="3" align="center"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"> <input type="hidden" name="cmd" value="s-xclick" /> <input type="hidden" name="hosted_button_id" value="DA3XGH5E3N7BQ" /> <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" style="width:5em;height:2em;" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" async/> <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" async></form><tr><td> Spider Jockey, Blaze, Evoker, Elder Guardian, Guardian<td> 10<td class="ten"><td> Ancient Debris<td> 2<td class="two"><tr><td> Chicken Jockey<td> 22<td class="twentytwo"><td> Diamond, Emerald, Gold Ore<td> 1<td class="one"><tr><td> Baby Hostiles<td> 12<td class="twelve"><td> Iron and Redstone Ore<td> 0.7<td class="pointseven"><tr><td> Ravager<td> 20<td class="twenty"><td> Clay Block, Potato, Raw beef, Raw Chicken, Raw Cod, Raw Mutton, Raw Porkchop, Raw Rabbit, Raw Salmon<td> 0.35<td class="pointthreefive"><td colspan="3" align="center"><div style="font-size:.5em;"><div> <img src="https://blockchain.info/Resources/buttons/donate_64.png" style="width:13vw;height:4vw;" async></div><div><p style="font-size:1.25em">Please Donate To Bitcoin Address: bc1qq8ulehldl4v0c6cav56fdhycsr8g3t732nsdv0</p></div><tr><th colspan="3"> Bosses<td> Lapis and Nether Quartz Ore<td> 0.2<td class="pointtwo"><td rowspan="3" colspan="3" style="font-size:.75em"> This website cost a small sum of 30$ per year. The website will remain updated and ad free. Thank you for using my tool!<tr><td> Enderdragon<td> 12,000<td id="enderdragon"><td> Wet Sponge and Wood<td> 0.15<td class="pointonefive"><tr><td> Wither<td> 50<td id="wither"><td> Others<td> 0.1<td class="pointone"></table> <br> <br> <br></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Minecraft, XP, Calculator, MinecraftXPCalculator, Reddit">
+<meta name="description" content="Web application that calculates the experience required in minecraft to go from a specified level to a target level. This calculator includes a raw experience points calculator aswell that will take a xp points number and convert it into the level that would be reached with the much xp.">
+<meta name="author" content="Chandler">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-165938855-1" async></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-165938855-1');
+</script>
+<!-- xp calculations -->
+<script src="script.js" async></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" async>
+</head>
+
+<body background="images/background.jpg">
+<header>
+</header>
+<form action="#" method="get"></form>
+<table align="center">
+	<tr>
+		<td style="padding-left:1em;padding-right:1em;"> Current Level <td align= "center"> <input type="number" id="currLevel">
+	<tr>
+		<td style="padding-left:1em;padding-right:1em;"> Target Level <td align= "center"> <input type="number"  id="targetLevel">
+    <tr>
+		<td colspan = "2" align= "center" valign="center"> <button type="button" onclick="calc()">Calculate</button>
+</table>
+<br>
+<table align="center">
+<tr>
+    <td> Raw XP Points to Levels
+<tr>
+    <td> <input type="number" id="points"> <td> <button type="button" onclick="pointsToLevels()">Calculate</button>
+<tr>
+    <td id="levelAnswer"> -
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table>
+	<tr>
+		<th> XP gained
+		<th> XP per action
+		<th> Actions needed
+		<th> XP gained
+		<th> XP per action
+		<th> Actions needed		
+		<th> XP gained
+		<th> XP per action
+		<th> Actions needed
+    <tr>
+        <th colspan="3"> Mobs
+        <th colspan="3"> Mining
+        <th colspan="3"> Other
+	<tr>
+		<td> All Passives excluding bat
+		<td> 1-3
+		<td class="onetothree">
+		<td> Monster Spawner 
+		<td> 1-3
+		<td class="onetothree">
+		<td> Bottle o' Enchanting 
+		<td> 3-11
+		<td class="threetoeleven">
+	<tr>
+		<td> Cave Spider, Creeper, Drowned, Enderman, Ghast, Hoglin, Husk, Illusioner, Phantom, Piglin, Pillager, Shulker, Silverfish, Skeleton, Spider, Stray, Vex, Vindicator, Witch, Wither Skeleton, Zombie, Zoglin, Zombie Pigman
+		<td> 5
+		<td class="five">
+		<td> Redstone Ore
+		<td> 1-5
+		<td class="onetofive">
+		<td> Trading with villager
+		<td> 3-6
+		<td class="threetosix">
+	<tr>
+		<td> Endermite
+		<td> 3
+		<td class="three">
+        <td> Lapis and Nether Quartz Ore
+		<td> 2-5
+		<td class="twotofive">
+        <td> Breeding Animals
+		<td> 1-7
+		<td class="onetoseven">
+	<tr>
+		<td> Large Slime and Magma Cube
+		<td> 4
+		<td class="four">
+		<td> Diamond and Emerald Ore
+		<td> 3-7
+		<td class="threetoseven">
+		<td> Catching Fish
+		<td> 1-6
+		<td class="onetosix">
+	<tr>
+		<td> Medium Slime and Magma Cube
+		<td> 2
+		<td class="two">
+		<td> Coal Ore
+		<td> 0-2
+		<td class="zerototwo">
+		<th colspan="3"> Donate :)
+	<tr>
+		<td> Small Slime and Magma Cube
+		<td> 1
+		<td class="one">
+		<th colspan="3"> Smelting/Cooking
+		<td rowspan="4" colspan="3" align="center"> 
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="DA3XGH5E3N7BQ" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"  style="width:5em;height:2em;" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" async/>
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" async>
+        </form>
+	<tr>
+		<td> Spider Jockey, Blaze, Evoker, Elder Guardian, Guardian
+		<td> 10
+		<td class="ten">
+		<td> Ancient Debris
+		<td> 2
+		<td class="two">
+	<tr>
+		<td> Chicken Jockey 
+		<td> 22
+		<td class="twentytwo">
+		<td> Diamond, Emerald, Gold Ore
+		<td> 1
+		<td class="one">
+	<tr>
+		<td> Baby Hostiles 
+		<td> 12
+		<td class="twelve">
+		<td> Iron and Redstone Ore 
+		<td> 0.7
+		<td class="pointseven">
+	<tr>
+		<td> Ravager
+		<td> 20
+		<td class="twenty">
+		<td> Clay Block, Potato, Raw beef, Raw Chicken, Raw Cod, Raw Mutton, Raw Porkchop, Raw Rabbit, Raw Salmon
+		<td> 0.35
+		<td class="pointthreefive">
+		<td colspan="3" align="center">
+		<div style="font-size:.5em;">
+        <div>
+        <img src="https://blockchain.info/Resources/buttons/donate_64.png" style="width:13vw;height:4vw;" async>
+    </div>
+    <div>
+         <p style="font-size:1.25em">Please Donate To Bitcoin Address:  bc1qq8ulehldl4v0c6cav56fdhycsr8g3t732nsdv0</p>
+    </div>
+	<tr>
+		<th colspan="3"> Bosses
+        <td> Lapis and Nether Quartz Ore
+		<td> 0.2
+		<td class="pointtwo">
+		<td rowspan="3" colspan="3" style="font-size:.75em"> This website cost a small sum of 30$ per year. The website will remain updated and ad free. Thank you for using my tool!
+	<tr>
+		<td> Enderdragon
+		<td> 12,000
+		<td id="enderdragon">
+        <td> Wet Sponge and Wood
+		<td> 0.15
+		<td class="pointonefive">
+	<tr>
+		<td> Wither
+		<td> 50
+		<td id="wither">
+		<td> Others
+		<td> 0.1
+		<td class="pointone">
+
+</table>
+<br>
+<br>
+<br>
+
+</body>
+</html>
