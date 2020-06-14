@@ -5,15 +5,29 @@
   font-display: swap;
 }
 
+
+html {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 30px;
+  }
+}
+
 /* font styling for entire page*/
 * {
     font-family: minecraftFont;
-    font-size: 1.07em;
 }
 /*<img class="logo" src="images/logo.webp" alt="Logo" style="width:55vw;height:29vw;" async> */
 header {
    background-image: url("images/logo.png"); 
-   background-size: 55% 80%;
+   background-size: 50% 80%;
    background-position: 50% 50%;
    background-repeat: no-repeat;
    padding-top: 30%;
@@ -42,8 +56,8 @@ th {
 }
 
 button {
-    font-size:  2em;
     background-color: rgba(0, 0, 0, 0.3);
+    font-size: 2vw;
     border: 0em;
     color: #66ffff;
     padding-top: .25em;
@@ -57,26 +71,21 @@ input {
     text-align: center;
     color: white;
     border: 0em;
-    font-size: 1.5em;
+}
+
+.clickableElements {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 .inlineTable {
     display: inline-block;
 }
-.space {
-    margin-top:30em;
-}
-
-.logo {
-  position: absolute;
-  color: white;
-  top: 0%;
-  left: 23%;
-}
 
 .centered {
   color: black;
-  font-size: 2.7em;
   font-weight: bold;
   position: absolute;
   top: 30%;
