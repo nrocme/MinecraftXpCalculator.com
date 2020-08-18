@@ -21,6 +21,9 @@
 <body background="images/background.jpg">
 <header>
 </header>
+<h1>
+<img src="images/logo.png" alt="Minecraft Xp Calculator" width="60%" height="60%"> 
+</h1>
 <form action="#" method="get"></form>
 <table align="center">
 	<tr>
@@ -34,21 +37,16 @@
 </table>
 <br>
 <table align="center">
-<tr>
-    <td> Raw XP Points to Levels
-<tr>
-    <td class="clickableElements"> <input type="number" id="points">
-<tr>
-    <td id="levelAnswer"> -
-<tr>
-    <td class="clickableElements"> <button type="button" onclick="pointsToLevels()">Calculate</button>
+    <tr>
+        <td> Raw XP Points to Levels
+    <tr>
+        <td class="clickableElements"> <input type="number" id="points">
+    <tr>
+        <td id="levelAnswer">-
+    <tr>
+        <td class="clickableElements"> <button type="button" onclick="pointsToLevels()">Calculate</button>
 </table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<table>
+<table id="middle">
 	<tr>
 		<th> XP gained
 		<th> XP per action
@@ -165,7 +163,7 @@
 
 </table>
 <br>
-<table>
+<table id="donate">
 <tr>
     <th colspan="5"> Donate :)
 <tr>

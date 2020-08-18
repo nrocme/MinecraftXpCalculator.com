@@ -5,18 +5,19 @@
   font-display: swap;
 }
 
-
 html {
-  font-size: 20px;
+    letter-spacing: .1em;
 }
 @media screen and (min-width: 320px) {
   html {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    letter-spacing: .1em;
   }
 }
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 30px;
+    font-size: 1.65em;
+    letter-spacing: .1em;
   }
 }
 
@@ -25,13 +26,7 @@ html {
     font-family: minecraftFont;
 }
 /*<img class="logo" src="images/logo.webp" alt="Logo" style="width:55vw;height:29vw;" async> */
-header {
-   background-image: url("images/logo.png"); 
-   background-size: 50% 80%;
-   background-position: 50% 50%;
-   background-repeat: no-repeat;
-   padding-top: 30%;
-}
+
 body {
     background-size: 100em 85em;  
     background-attachment: fixed;
@@ -46,13 +41,24 @@ table, th, td {
    text-align: center;
 }
 
+h1 {
+    padding-left: 30%;
+}
+
 td  {
     color: white;
+    padding-top: .15%;
+    padding-right: .5%;
+    padding-left: .5%;
+    padding-bottom: .15%;
 }
 
 th {
-
 	color: #66ffff;
+    padding-top: .5%;
+    padding-right: .5%;
+    padding-left: .5%;
+    padding-bottom: .5%;
 }
 
 button {
@@ -80,10 +86,6 @@ input {
     padding-right: .5em;
 }
 
-.inlineTable {
-    display: inline-block;
-}
-
 .centered {
   color: black;
   font-weight: bold;
@@ -92,3 +94,16 @@ input {
   left: 51%;
   transform: translate(-50%, -50%);
 }
+
+#middle {
+    margin-top: 2.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+#donate {
+    margin: 0 auto; 
+    text-align: left;
+}
+

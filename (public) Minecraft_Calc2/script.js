@@ -30,22 +30,29 @@ function pointsToLevels()
     document.getElementById("levelAnswer").innerHTML = i-1;
 }
     
-    
+function middle() {
+    document.getElementById( 'middle' ).scrollIntoView();
+};
+
 function calc() 
 {
     var targetXp = xpNeed(document.getElementById("currLevel").value, document.getElementById("targetLevel").value);
-    
+    if (document.getElementById("levelAnswer").innerText === "-") {
+        document.getElementById("levelAnswer").innerHTML = targetXp;
+    }
+        
+
 	var five = document.getElementsByClassName('five');
     for (var i = 0; i < five.length; i++) 
         five[i].innerHTML = (targetXp/5).toFixed(0);
 		
     var onetotwo = document.getElementsByClassName('onetotwo');
     for (var i = 0; i < onetotwo.length; i++) 
-        onetotwo[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/2).toFixed(0);
+        onetotwo[i].innerHTML = (targetXp/2).toFixed(0) + " to " + (targetXp/1).toFixed(0);
     
     var onetothree = document.getElementsByClassName('onetothree');
     for (var i = 0; i < onetothree.length; i++)
-        onetothree[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/3).toFixed(0);
+        onetothree[i].innerHTML = (targetXp/3).toFixed(0) + " to " + (targetXp/1).toFixed(0);
 
 	var four = document.getElementsByClassName('four');
     for (var i = 0; i < four.length; i++) 
@@ -77,7 +84,7 @@ function calc()
         
 	var onetotwo = document.getElementsByClassName('onetotwo');
 		for (var i = 0; i < onetotwo.length; i++)
-			onetotwo[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/2).toFixed(0);
+			onetotwo[i].innerHTML = (targetXp/2).toFixed(0) + " to " + (targetXp/1).toFixed(0);
     
 	var one = document.getElementsByClassName('one');
 		for (var i = 0; i < one.length; i++)
@@ -92,19 +99,19 @@ function calc()
 
 	var threetoseven = document.getElementsByClassName('threetoseven');
         for (var i = 0; i < threetoseven.length; i++)
-            threetoseven[i].innerHTML = (targetXp/3).toFixed(0) + " to " + (targetXp/7).toFixed(0);
+            threetoseven[i].innerHTML = (targetXp/7).toFixed(0) + " to " + (targetXp/3).toFixed(0);
 
 	var twotofive = document.getElementsByClassName('twotofive');
 		for (var i = 0; i < twotofive.length; i++)
-			twotofive[i].innerHTML = (targetXp/2).toFixed(0) + " to " + (targetXp/5).toFixed(0);
+			twotofive[i].innerHTML = (targetXp/5).toFixed(0) + " to " + (targetXp/2).toFixed(0);
         
 	var onetofive = document.getElementsByClassName('onetofive');
 		for (var i = 0; i < onetofive.length; i++)
-			onetofive[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/5).toFixed(0);
+			onetofive[i].innerHTML = (targetXp/5).toFixed(0) + " to " + (targetXp/1).toFixed(0);
         
 	var fifteentofortythree = document.getElementsByClassName('fifteentofortythree');
 		for (var i = 0; i < fifteentofortythree.length; i++)
-			fifteentofortythree[i].innerHTML = (targetXp/15).toFixed(0) + " to " + (targetXp/43).toFixed(0);
+			fifteentofortythree[i].innerHTML = (targetXp/43).toFixed(0) + " to " + (targetXp/15).toFixed(0);
 		
 	var pointseven = document.getElementsByClassName('pointseven');
 		for (var i = 0; i < pointseven.length; i++)
@@ -128,23 +135,23 @@ function calc()
         
 	var threetoeleven = document.getElementsByClassName('threetoeleven');
 		for (var i = 0; i < threetoeleven.length; i++)
-			threetoeleven[i].innerHTML = (targetXp/3).toFixed(0) + " to " + (targetXp/11).toFixed(0);
+			threetoeleven[i].innerHTML = (targetXp/11).toFixed(0) + " to " + (targetXp/3).toFixed(0);
         
 	var threetosix = document.getElementsByClassName('threetosix');
 		for (var i = 0; i < threetosix.length; i++)
-			threetosix[i].innerHTML = (targetXp/3).toFixed(0) + " to " + (targetXp/6).toFixed(0);
+			threetosix[i].innerHTML = (targetXp/6).toFixed(0) + " to " + (targetXp/3).toFixed(0);
         
 	var onetoseven = document.getElementsByClassName('onetoseven');
 		for (var i = 0; i < onetoseven.length; i++)
-			onetoseven[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/7).toFixed(0);
+			onetoseven[i].innerHTML = (targetXp/7).toFixed(0) + " to " + (targetXp/1).toFixed(0);
         
 	var onetosix = document.getElementsByClassName('onetosix');
 		for (var i = 0; i < onetosix.length; i++)
-			onetosix[i].innerHTML = (targetXp/1).toFixed(0) + " to " + (targetXp/6).toFixed(0);
+			onetosix[i].innerHTML = (targetXp/6).toFixed(0) + " to " + (targetXp/1).toFixed(0);
         
 	var zerototwo = document.getElementsByClassName('zerototwo');
 		for (var i = 0; i < zerototwo.length; i++)
-			zerototwo[i].innerHTML = (targetXp/0).toFixed(0) + " to " + (targetXp/2).toFixed(0);
+			zerototwo[i].innerHTML = (targetXp/2).toFixed(0) + " to " + (targetXp/0).toFixed(0);
         
-    
+    middle();
 }
